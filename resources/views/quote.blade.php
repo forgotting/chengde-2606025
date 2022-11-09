@@ -26,7 +26,7 @@
 <div class="flex-center position-ref full-height">
     @include('login')
     <div class="content">
-        {!! Form::open(['url' => url('/quote/'.Request::route('id')), 'method' => 'post']) !!}
+        {!! Form::open(['url' => URL::to('/quote/'.Request::route('id'), array(), true), 'method' => 'post']) !!}
         {{ Form::hidden('id', Request::route('id')) }}
         <table border="1">
             <tr>
