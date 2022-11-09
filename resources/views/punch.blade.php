@@ -88,9 +88,11 @@
             var date = new Date();
             var format = "YYYY-MMM-DD DDD";
             dateConvert(date,format)
-        }, 1);
-        $(".btn-primary").click({url: "{{ url('/punch/start_work/') }}"}, punch);
-        $(".btn-success").click({url: "{{ url('/punch/stop_work/') }}"}, punch);
+        }, 1);URL::to('/quote/'.Request::route('id'), array(), true)
+        //$(".btn-primary").click({url: "{{ url('/punch/start_work/') }}"}, punch);
+        //$(".btn-success").click({url: "{{ url('/punch/stop_work/') }}"}, punch);
+        $(".btn-primary").click({url: "{{ URL::to('/punch/start_work/', array(), true) }}"}, punch);
+        $(".btn-success").click({url: "{{ URL::to('/punch/stop_work/', array(), true) }}"}, punch);
     });
 
     function dateConvert(dateobj, format) {
