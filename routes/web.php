@@ -28,4 +28,4 @@ Route::post('/quote/{id}', 'App\Http\Controllers\QuoteController@count');
 
 Route::get('excel/export/punch/{id}/{year}-{month}','ExcelController@punchExport');
 
-Route::post('/login', 'UserController@login')->name('login');
+Route::post('/login', 'App\Http\Controllers\UserController@login')->name('login');
