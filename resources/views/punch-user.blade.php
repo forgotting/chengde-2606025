@@ -12,7 +12,7 @@
 @section('content')
 <style>
     .title {
-        font-size:50px;
+        font-size:51px;
     }
 </style>
 
